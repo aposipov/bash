@@ -11,3 +11,7 @@ find . -type f -not -name "*.*" -exec rm {} \;
 ```
 find . -type f -not -name "*.*" -delete
 ```
+поиск файлов без расширения игнорируя вложения папки `.git` (с командой можно экспериментировать)
+```
+find . -type f -not -name "*.*" -not -path "./.git/*"
+```
