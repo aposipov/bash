@@ -5,5 +5,9 @@ find . -type f -not -name "*.*"
 ```
 поиск файлов без расширения и удаление, опция `-exec` для выполнения действия
 ```
-find . -type f -not -name "*.*" -exec rm 
+find . -type f -not -name "*.*" -exec rm {} \;
+```
+более безопасная команда удаления
+```
+find . -type f -not -name "*.*" -delete
 ```
